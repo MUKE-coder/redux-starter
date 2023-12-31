@@ -6,7 +6,7 @@ import React from "react";
 
 export default function Cart() {
   return (
-    <div>
+    <div className="px-20 py-16">
       <Breadcrumb />
       <div className="grid grid-cols-12 gap-14">
         <div className="col-span-8">
