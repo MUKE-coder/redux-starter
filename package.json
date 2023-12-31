@@ -9,9 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
+    "lucide-react": "^0.303.0",
+    "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.4"
+    "react-multi-carousel": "^2.8.4",
+    "react-redux": "^9.0.4",
+    "redux": "^5.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
