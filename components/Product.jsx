@@ -1,9 +1,16 @@
+import { addToCart } from "@/redux/slices/cartSlice";
 import { BaggageClaim } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useDispatch } from "react-redux";
 
 export default function Product({ product }) {
+  const dispatch = useDispatch();
+  function handleAddToCart() {
+    console.log(product);
+    dispatch(addToCart(product));
+  }
   return (
     <div className="rounded-lg mr-3  bg-white dark:bg-slate-900 overflow-hidden border shadow">
       <Link href="#">
@@ -23,7 +30,10 @@ export default function Product({ product }) {
         </Link>
         <div className="flex items-center justify-between gap-2 pb-3 dark:text-slate-200 text-slate-800">
           <p>$ {product.price}</p>
-          <button className="flex items-center space-x-2 bg-lime-600 px-4 py-2 rounded-md text-white">
+          <button
+            onClick={() => handleAddToCart()}
+            className="flex items-center space-x-2 bg-lime-600 px-4 py-2 rounded-md text-white"
+          >
             <BaggageClaim />
             <span>Add</span>
           </button>
